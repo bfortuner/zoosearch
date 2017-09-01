@@ -1,33 +1,25 @@
-Label-AI
+SearchZoo
 ===========================
 
-Hand-labeling tool accelerated with ML for blazing fast annotation.
+Search engine for machine learning models and datasets
 
 Setup
 -----
 
 ```sh
 % npm install
-% pip install -r flask/requirements.in
 ```
 
 Usage
 -----
 
-Launch the GraphQL API server:
-
-```sh
-% cd flask
-% python app.py
-```
-
-Launch the development web server which serves the static client-side app:
+Launch the development web server:
 
 ```sh
 % npm start
 ```
 
-Launch the prod JS server
+Launch the prod server
 
 ```
 npm run build
