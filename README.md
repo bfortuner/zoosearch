@@ -3,6 +3,11 @@ SearchZoo
 
 Search engine for machine learning models and datasets
 
+Submit new model/dataset
+------------------------
+
+Cut an issue or send a pull request with your new model/dataset. Example submissions can be found in the [models.js](https://github.com/bfortuner/modelzoo/blob/master/src/models.js) and [datasets.js](https://github.com/bfortuner/modelzoo/blob/master/src/datasets.js) files.
+
 Setup
 -----
 
