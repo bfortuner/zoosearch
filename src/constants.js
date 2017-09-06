@@ -14,27 +14,58 @@ export const PAPER_URL = "paper_url"
 
 
 // Topics
-export const BIOLOGY = 'biology'
-export const HEALTHCARE = 'healthcare'
-export const NEUROSCIENCE = 'neuroscience'
-export const FINANCE = 'finance'
-export const FACES = 'faces'
-export const ANIMALS = 'animals'
-export const NATURAL_SCENES = 'natural scenes'
-export const PSYCHOLOGY = 'psychology'
-export const SATELLITE = 'satellite'
-export const AUTONOMOUS_CARS = 'autonomous cars'
-export const SELF_DRIVING = 'self-driving cars'
+export const BIOLOGY = 'Biology'
+export const HEALTHCARE = 'Healthcare'
+export const NEUROSCIENCE = 'Neuroscience'
+export const MEDICAL = 'Medical'
+export const FINANCE = 'Finance'
+export const FACES = 'Faces'
+export const ANIMALS = 'Animals'
+export const NATURAL_SCENES = 'Natural Scenes'
+export const PSYCHOLOGY = 'Psychology'
+export const SATELLITE = 'Satellite'
+export const CARS = 'Cars'
+export const SELF_DRIVING = 'Self-driving Cars'
+export const GENERAL = 'General'
+export const MUSIC = 'Music'
+export const SPACE = 'Space'
+export const RESTAURANTS = 'Restaurants'
+export const SPORTS = 'Sports'
+export const MOVIES = 'Movies'
 
 
 // Problem Types
-export const COMPUTER_VISION = 'computer vision'
-export const CLASSIFICATION = 'classification'
-export const MULTILABEL = 'multi-label classification'
-export const NLP = 'nlp'
-export const SEGMENTATION = 'segmentation'
-export const OBJECT_DETECTION = 'object detection'
-export const SENTIMENT = 'sentiment'
-export const KEYPOINT = 'keypoint'
-export const LANDMARK = 'landmark'
-export const FACE_DETECTION = 'face detection'
+export const COMPUTER_VISION = 'Computer Vision'
+export const CLASSIFICATION = 'Classification'
+export const MULTILABEL = 'Multi-label Classification'
+export const NLP = 'NLP'
+export const SEGMENTATION = 'Segmentation'
+export const SEMANTIC_SEGMENTATION = 'Semantic Segmentation'
+export const INSTANCE_SEGMENTATION = 'Instance Segmentation'
+export const OBJECT_DETECTION = 'Object detection'
+export const SENTIMENT = 'Sentiment'
+export const KEYPOINT = 'Keypoint'
+export const LANDMARK = 'Landmark'
+export const FACE_DETECTION = 'Face Detection'
+export const OCR = 'OCR'
+export const CAPTIONING = 'Captioning'
+export const VIDEO = 'Video'
+
+
+// Common pretraining Datasets
+export const IMAGENET = 'ImageNet'
+export const PLACES205 = 'Places205'
+export const CAMVID = 'CamVid'
+export const MSCOCO = 'MS COCO'
+export const PASCALVOC = 'Pascal VOC'
+
+
+
+// Dataset Class Labels
+export const DATASET_CLASSES = {
+    IMAGENET:[],
+    PLACES205:[],
+    CAMVID:[],
+    MSCOCO:[],
+    PASCALVOC:[],
+}

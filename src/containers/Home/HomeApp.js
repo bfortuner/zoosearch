@@ -38,22 +38,23 @@ const FILTER_OPTIONS = [
 const SEARCH_KEYS = [
   "title",
   "type",
-  "pretrained",
   "architecture",
-  "framework",
+  "frameworks.framework",
   "dataset",
-  "classes",
+  "class_labels",
+  "topics",
   "problem_types",
 ]
 
 const SEARCH_OPTIONS = {
   shouldSort: true,
   includeScore: true,
+  tokenize: true,
   threshold: 0.4,
   location: 0,
-  distance: 100,
+  distance: 500,
   maxPatternLength: 32,
-  minMatchCharLength: 1,
+  minMatchCharLength: 3,
   keys: SEARCH_KEYS
 };
 
@@ -87,15 +88,8 @@ class HomeApp extends Component {
 
   bind() {
     this.bound = {
-        // onClickOut    : this.onClickOut.bind(this),
-        // onFocus       : this.onFocus.bind(this),
-        // onBlur        : this.onBlur.bind(this),
         onChange: this.onChange.bind(this),
         search: this.search.bind(this),
-        // onKeyPress    : this.onKeyPress.bind(this),
-        // onKeyDown     : this.onKeyDown.bind(this),
-        // onKeyUp       : this.onKeyUp.bind(this),
-        // toggle        : this.toggle.bind(this)
     };
   }
 
@@ -133,13 +127,10 @@ class HomeApp extends Component {
           action={<Dropdown button options={FILTER_OPTIONS} defaultValue='all' onChange={this.changeIndex}/>}
           actionPosition='left'
           fluid icon='search' 
-          placeholder='Pytorch Resnet34 or Medical Segmentation...' 
+          placeholder='Pytorch Resnet or Satellite image...' 
           size='huge' 
           onChange={this.onChange}
           />
-
-                    {/* onKeyPress={this.bound.onKeyPress} 
-          className={this.classes.search}  */}
 
         {/* https://react.semantic-ui.com/elements/segment */}
           
@@ -167,7 +158,6 @@ class HomeApp extends Component {
                         <a key={item.framework} href={item.url}>
                           <Button size="tiny" primary floated='right'>
                             {item.framework}
-                          <Icon name='right chevron' />
                           </Button>
                         </a>
                       )}
@@ -182,19 +172,30 @@ class HomeApp extends Component {
                   )}
                   </Item.Meta>
 
-                  {data.item.description != null &&
-                    <Item.Description>
-                      {data.item.description}
-                    </Item.Description>}
                   
+                    <Item.Description>
+                    {data.item.description != null &&
+                      data.item.description
+                    }
+                    
+                    {data.item.paper_url != null &&
+                    <span> &nbsp;
+                      <a href={data.item.paper_url}>
+                        [Paper]
+                      </a>
+                    </span>}
+                    </Item.Description>
+                  
+ 
+
                   <Item.Extra>
                     {data.item.dataset != null &&
-                    <Label>{data.item.dataset}</Label>}
+                    <Label size='tiny'>{data.item.dataset}</Label>}
                     {data.item.topics.map(item => 
-                      <Label key={item}>{item}</Label>
+                      <Label size='tiny' key={item}>{item}</Label>
                     )}
                     {data.item.problem_types.map(item => 
-                      <Label key={item}>{item}</Label>
+                      <Label size='tiny' key={item}>{item}</Label>
                     )}
                   </Item.Extra>
 
