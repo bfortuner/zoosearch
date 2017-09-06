@@ -33,12 +33,12 @@ export const MODEL_DATA = [
 		"title": "Places205-AlexNet",
 		"type": c.MODEL,
         "architecture": ALEXNET,
-        "frameworks": [
-			{
-				"framework": CAFFE,
-				"url": "http://places.csail.mit.edu/model/placesCNN.tar.gz"
-			},
-		],
+			"frameworks": [
+				{
+					"framework": CAFFE,
+					"url": "http://places.csail.mit.edu/model/placesCNN.tar.gz"
+				},
+			],
         "description":"CNN trained on 205 scene categories of Places Database with ~2.5 million images",
 		"dataset": "Places205",
 		"class_labels": [],
@@ -49,51 +49,51 @@ export const MODEL_DATA = [
 	{
 		"title": "SSD MobileNet COCO",
 		"type": c.MODEL,
-        "architecture": SSD,
-        "frameworks": [
+		"architecture": SSD,
+		"frameworks": [
 			{
 				"framework": TENSORFLOW,
 				"url": "http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_11_06_2017.tar.gz"
 			},
 		],
-        "description": null,
+		"description": null,
 		"dataset": c.MSCOCO,
 		"class_labels": [],
-        "problem_types": [c.OBJECT_DETECTION],
+		"problem_types": [c.OBJECT_DETECTION],
 		"topics": [],
 		"paper_url": null
 	},
 	{
 		"title": "SSD Inception COCO",
 		"type": c.MODEL,
-        "architecture": SSD,
-        "frameworks": [
+		"architecture": SSD,
+		"frameworks": [
 			{
 				"framework": TENSORFLOW,
 				"url": "http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_11_06_2017.tar.gz"
 			},
 		],
-        "description": null,
+		"description": null,
 		"dataset": c.MSCOCO,
 		"class_labels": [],
-        "problem_types": [c.OBJECT_DETECTION],
+		"problem_types": [c.OBJECT_DETECTION],
 		"topics": [],
 		"paper_url": null
 	},
 	{
 		"title": "RFCN Resnet101 COCO",
 		"type": c.MODEL,
-        "architecture": RFCN,
-        "frameworks": [
+		"architecture": RFCN,
+		"frameworks": [
 			{
 				"framework": TENSORFLOW,
 				"url": "http://download.tensorflow.org/models/object_detection/rfcn_resnet101_coco_11_06_2017.tar.gz"
 			},
 		],
-        "description": null,
+		"description": null,
 		"dataset": c.MSCOCO,
 		"class_labels": [],
-        "problem_types": [c.OBJECT_DETECTION],
+		"problem_types": [c.OBJECT_DETECTION],
 		"topics": [],
 		"paper_url": null
 	},
