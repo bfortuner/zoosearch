@@ -1,7 +1,6 @@
 import React from 'react';
+import * as c from './constants.js';
 
-
-export const MODEL = 'Model';
 
 // Frameworks
 export const CAFFE = 'Caffe'
@@ -25,15 +24,23 @@ export const SQUEEZENET = 'SqueezeNet'
 export const MODEL_DATA = [
 	{
 		"title": "Places205-AlexNet",
-		"type": "Model",
-        "architecture": "AlexNet",
-        "framework":"Caffe",
+		"type": c.MODEL,
+        "architecture": ALEXNET,
+        "frameworks": [
+			{
+				"framework": CAFFE,
+				"url": "http://places.csail.mit.edu/model/placesCNN.tar.gz"
+			},
+			{
+				"framework": PYTORCH,
+				"url": "http://places.csail.mit.edu/model/placesCNN.tar.gz"
+			}
+		],
         "description":"CNN trained on 205 scene categories of Places Database with ~2.5 million images",
 		"dataset": "Places205",
-		"classes": [],
-        "problem_types": ["classification"],
-        "website_url":"http://places.csail.mit.edu/index.html",
-		"download_url": "http://places.csail.mit.edu/model/placesCNN.tar.gz",
+		"class_labels": [],
+        "problem_types": [c.CLASSIFICATION],
+		"topics": [c.NATURAL_SCENES],
 		"paper_url": "http://places.csail.mit.edu/places_NIPS14.pdf"
 	}
 ]

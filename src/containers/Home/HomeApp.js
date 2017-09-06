@@ -3,10 +3,13 @@ import {
   Button, Container, Grid, Header, Icon, 
   Image, Item, Label, Menu, Segment, 
   Step, Table, Input, Dropdown, Link
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
 import Fuse from 'fuse.js';
-import FuzzySearch from 'react-fuzzy'
-import {SEARCH_DATA} from '../../search_data.js'
+import FuzzySearch from 'react-fuzzy';
+import {SEARCH_DATA} from '../../search_data.js';
+import {MODEL_DATA} from '../../models.js';
+import {DATASET_DATA} from '../../datasets.js';
+import * as c from '../../constants.js';
 
 
 const style = {
@@ -54,6 +57,12 @@ const SEARCH_OPTIONS = {
   keys: SEARCH_KEYS
 };
 
+var INDEX_LOOKUP = {
+  'models': MODEL_DATA,
+  'datasets': DATASET_DATA,
+  'all': SEARCH_DATA
+}
+
 var INDEX = SEARCH_DATA;
 
 
@@ -62,11 +71,18 @@ class HomeApp extends Component {
     super(props);
     this.state = {
         searchResult: [],
-
+        fuse: new Fuse(SEARCH_DATA, SEARCH_OPTIONS)
     };
-
-    this.fuse = new Fuse(INDEX, SEARCH_OPTIONS);
+    this.modelCount = MODEL_DATA.length;
+    this.datasetCount = DATASET_DATA.length;
     this.onChange = this.onChange.bind(this);
+    this.changeIndex = this.changeIndex.bind(this);
+  }
+
+  changeIndex(e, data) {
+    this.setState({
+      fuse: new Fuse(INDEX_LOOKUP[data.value], SEARCH_OPTIONS)
+    });
   }
 
   bind() {
@@ -91,11 +107,12 @@ class HomeApp extends Component {
     }
 
     this.setState({
-      searchResult: this.fuse.search(query)
+      searchResult: this.state.fuse.search(query)
     });
   }
 
   render() {
+    var slogan = "Search "+ this.modelCount + " machine learning models and " + this.datasetCount + " datasets";
     return (
       <div>
         <Header
@@ -109,11 +126,11 @@ class HomeApp extends Component {
           as='h3'
           textAlign='center'
           style={style.h3}
-          content='Search for machine learning models and datasets'
+          content={slogan}
         />
         <Container>
           <Input 
-          action={<Dropdown button options={FILTER_OPTIONS} defaultValue='all' />}
+          action={<Dropdown button options={FILTER_OPTIONS} defaultValue='all' onChange={this.changeIndex}/>}
           actionPosition='left'
           fluid icon='search' 
           placeholder='Pytorch Resnet34 or Medical Segmentation...' 
@@ -131,47 +148,56 @@ class HomeApp extends Component {
               return (
                 <Item key={i}>
                 <Item.Content>
+
                   <Item.Header as='a'>
-                  {data.item.website_url != null ? (
-                    <a href={data.item.website_url}>{data.item.title}</a>
-                    ) : (
-                      <span>{data.item.title}</span>
-                  )}
+                    <span>{data.item.title}</span>
                   </Item.Header>
                   
-                  <a href={data.item.download_url}>
-                  <Button primary floated='right'>
-                    Download
-                    <Icon name='right chevron' />
-                    
-                    </Button></a>
-                  <Item.Meta>
-                  {data.item.type}
-                  </Item.Meta>
+                  {data.item.type === c.DATASET &&
+                    <a href={data.item.website_url}>
+                      <Button size='tiny' primary floated='right'>
+                        Website
+                      <Icon name='right chevron' />
+                      </Button>
+                    </a>}
+
+                  {data.item.type === c.MODEL &&
+                    <span>
+                      {data.item.frameworks.map(item => 
+                        <a key={item.framework} href={item.url}>
+                          <Button size="tiny" primary floated='right'>
+                            {item.framework}
+                          <Icon name='right chevron' />
+                          </Button>
+                        </a>
+                      )}
+                    </span>
+                  }
                   
+                  <Item.Meta>
+                  {data.item.type === c.DATASET ? (
+                    <span>{data.item.type}</span>
+                    ) : (
+                    <span>{data.item.architecture}</span>
+                  )}
+                  </Item.Meta>
+
                   {data.item.description != null &&
                     <Item.Description>
                       {data.item.description}
                     </Item.Description>}
                   
                   <Item.Extra>
-                    {/* {data.item.paper_url != null &&
-                    <a href={data.item.paper_url}>
-                    <Button floated='left' primary>
-                      Paper
-                    </Button></a>} */}
-
-                    {data.item.framework != null &&
-                    <Label>{data.item.framework}</Label>}
-                    {data.item.architecture != null &&
-                    <Label>{data.item.architecture}</Label>}
                     {data.item.dataset != null &&
                     <Label>{data.item.dataset}</Label>}
+                    {data.item.topics.map(item => 
+                      <Label key={item}>{item}</Label>
+                    )}
+                    {data.item.problem_types.map(item => 
+                      <Label key={item}>{item}</Label>
+                    )}
                   </Item.Extra>
 
-                  <Item.Extra>
-
-                  </Item.Extra>
                 </Item.Content>
                 </Item>
               )
