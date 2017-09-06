@@ -109,7 +109,7 @@ class HomeApp extends Component {
           as='h3'
           textAlign='center'
           style={style.h3}
-          content='Search engine for machine learning models and datasets'
+          content='Search for machine learning models and datasets'
         />
         <Container>
           <Input 
