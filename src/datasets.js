@@ -5,100 +5,100 @@ import * as c from './constants.js';
 
 export const DATASET_DATA = [ 
     {
-		"title": "CamVid",
+        "title": "CamVid",
         "type": c.DATASET,
         "description": `The Cambridge-driving Labeled Video Database (CamVid) is the first collection of videos with object 
                         class semantic labels, complete with metadata. The database provides ground truth labels that associate
                         each pixel with one of 32 semantic classes.`,
-		"topics": [c.SELF_DRIVING, c.CARS],
+        "topics": [c.SELF_DRIVING, c.CARS],
         "problem_types": [c.SEGMENTATION, c.VIDEO],
         "website_url": "http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/",
-		"paper_url": "http://www.cs.ucl.ac.uk/staff/G.Brostow/papers/SemanticObjectClassesInVideo_BrostowEtAl2009.pdf"
+        "paper_url": "http://www.cs.ucl.ac.uk/staff/G.Brostow/papers/SemanticObjectClassesInVideo_BrostowEtAl2009.pdf"
     },
     {
-		"title": "MNIST",
+        "title": "MNIST",
         "type": c.DATASET,
         "description": `The MNIST database of handwritten digits, available from this page, has a training set of 60,000 
                         examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. 
                         The digits have been size-normalized and centered in a fixed-size image.`,
-		"topics": [],
+        "topics": [],
         "problem_types": [c.CLASSIFICATION],
         "website_url": "http://yann.lecun.com/exdb/mnist/",
-		"paper_url": null
+        "paper_url": null
     },
     {
-		"title": "Cifar-10",
+        "title": "Cifar-10",
         "type": c.DATASET,
         "description": `The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. 
                         There are 50000 training images and 10000 test images.`,
-		"topics": [],
+        "topics": [],
         "problem_types": [c.CLASSIFICATION],
         "website_url": "https://www.cs.toronto.edu/~kriz/cifar.html",
-		"paper_url": null
+        "paper_url": null
     },
     {
-		"title": "Cifar-100",
+        "title": "Cifar-100",
         "type": c.DATASET,
         "description": `This dataset is just like CIFAR-10, except it has 100 classes containing 600 images each. There are 
                         500 training images and 100 testing images per class. The 100 classes in the CIFAR-100 are grouped 
                         into 20 superclasses. Each image comes with a "fine" label (the class to which it belongs) and a 
                         "coarse" label (the superclass to which it belongs).`,
-		"topics": [],
+        "topics": [],
         "problem_types": [c.CLASSIFICATION],
         "website_url": "https://www.cs.toronto.edu/~kriz/cifar.html",
-		"paper_url": null
+            "paper_url": null
     },
     {
-		"title": "MS COCO",
+        "title": "MS COCO",
         "type": c.DATASET,
         "description": `COCO is Microsoft's large-scale object detection, segmentation, and captioning dataset. Includes class labels, 
                         bounding boxes, keypoints, captions, and instance segmentation annotations.`,
-		"topics": [c.GENERAL],
+        "topics": [c.GENERAL],
         "problem_types": [c.CLASSIFICATION, c.OBJECT_DETECTION, c.SEGMENTATION, c.KEYPOINT, c.CAPTIONING],
         "website_url":"http://mscoco.org/dataset/#overview",
-		"paper_url": "http://arxiv.org/abs/1405.0312"
+        "paper_url": "http://arxiv.org/abs/1405.0312"
     },
     {
-		"title": "ImageNet",
+        "title": "ImageNet",
         "type": c.DATASET,
         "description": `Image database organized according to the WordNet hierarchy in which each node 
                         of the hierarchy is depicted by hundreds and thousands of images.`,
-		"topics": [c.GENERAL],
+        "topics": [c.GENERAL],
         "problem_types": [c.CLASSIFICATION, c.OBJECT_DETECTION],
         "website_url":"http://image-net.org/index",
-		"paper_url": null
+        "paper_url": null
     },
     {
-		"title": "Pascal VOC",
+        "title": "Pascal VOC",
         "type": c.DATASET,
         "description": `20 classes. The train/val data has 11,530 images containing 27,450 ROI annotated objects and 6,929 segmentations.`,
-		"topics": [c.GENERAL],
+        "topics": [c.GENERAL],
         "problem_types": [c.CLASSIFICATION, c.OBJECT_DETECTION, c.SEGMENTATION],
         "website_url":"http://host.robots.ox.ac.uk/pascal/VOC/",
-		"paper_url": "http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham10.pdf"
+        "paper_url": "http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham10.pdf"
     },
     {
-		"title": "Places205",
+        "title": "Places205",
         "type": c.DATASET,
         "description": `Scene recognition is one of the hallmark tasks of computer vision, allowing defining a context for object 
                         recognition. Here we introduce a new scene-centric database called Places, with 205 scene categories 
                         and 2.5 millions of images with a category label.`,
-		"topics": [c.NATURAL_SCENES],
+        "topics": [c.NATURAL_SCENES],
         "problem_types": [c.CLASSIFICATION],
         "website_url":"http://places.csail.mit.edu/downloadData.html",
-		"paper_url": "http://places.csail.mit.edu/places_NIPS14.pdf"
+        "paper_url": "http://places.csail.mit.edu/places_NIPS14.pdf"
     },
     { 
         "title":"10k US Adult Faces Database",
         "type": c.DATASET,
         "description": `This database contains 10,168 natural face photographs and several measures for 2,222 of the faces, 
-                       including memorability scores, computer vision and psychology attributes, and landmark point annotations.
-                       The face photographs are JPEGs with 72 pixels/in resolution and 256-pixel height.`,
+                        including memorability scores, computer vision and psychology attributes, and landmark point annotations.
+                        The face photographs are JPEGs with 72 pixels/in resolution and 256-pixel height.`,
         "topics": [c.PSYCHOLOGY, c.FACE_DETECTION],
         "problem_types": [c.LANDMARK, c.SENTIMENT, c.FACE_DETECTION],
         "website_url":  "http://wilmabainbridge.com/facememorability2.html",
         "paper_url": "http://wilmabainbridge.com/papers/jepg-2013.pdf",
-     },
+    },
     { 
         "title": "Cats vs Dogs",
         "type": c.DATASET,
@@ -140,7 +140,7 @@ export const DATASET_DATA = [
         "problem_types": [c.COMPUTER_VISION, c.CLASSIFICATION, c.SENTIMENT],
         "website_url":  "http://csea.phhp.ufl.edu/media.html",
         "paper_url": "http://www.imageemotion.org/machajdik_hanbury_affective_image_classification.pdf",
-     },
+    },
     { 
         "title": "Animals with attributes",
         "type": c.DATASET,
@@ -152,7 +152,7 @@ export const DATASET_DATA = [
         "problem_types": [c.COMPUTER_VISION, c.CLASSIFICATION],
         "website_url":  "https://cvml.ist.ac.at/AwA/",
         "paper_url": "http://cvml.ist.ac.at/papers/lampert-cvpr2009.pdf",
-     },
+    },
     { 
         "title": "Caltech Pedestrian Detection Benchmark",
         "type": c.DATASET,
@@ -161,7 +161,7 @@ export const DATASET_DATA = [
         "problem_types": [],
         "website_url":  "https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/",
         "paper_url": null,
-     },
+    },
     { 
         "title": "Chars74K dataset, Character Recognition in Natural Images (both English and Kannada are available)",
         "type": c.DATASET,
@@ -170,7 +170,7 @@ export const DATASET_DATA = [
         "problem_types": [c.NLP, c.OCR],
         "website_url":  "http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/",
         "paper_url": null,
-     },
+    },
     { 
         "title": "Face Recognition Benchmark",
         "type": c.DATASET,
@@ -179,7 +179,7 @@ export const DATASET_DATA = [
         "problem_types": [],
         "website_url":  "http://www.face-rec.org/databases/",
         "paper_url": null,
-     },
+    },
     { 
         "title": "GDXray:  X-ray images for X-ray testing and Computer Vision",
         "type": c.DATASET,
@@ -188,7 +188,7 @@ export const DATASET_DATA = [
         "problem_types": [],
         "website_url":  "http://dmery.ing.puc.cl/index.php/material/gdxray/",
         "paper_url": null,
-     },
+    },
     { 
         "title": "ImageNet (in WordNet hierarchy)",
         "type": c.DATASET,
@@ -197,7 +197,7 @@ export const DATASET_DATA = [
         "problem_types": [],
         "website_url":  "http://www.image-net.org/",
         "paper_url": null,
-     },
+    },
     { 
         "title": "Indoor Scene Recognition",
         "type": c.DATASET,
@@ -206,7 +206,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://web.mit.edu/torralba/www/indoor.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"International Affective Picture System, UFL",
         "type": c.DATASET,
@@ -215,7 +215,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://csea.phhp.ufl.edu/media/iapsmessage.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Massive Visual Memory Stimuli, MIT",
         "type": c.DATASET,
@@ -224,7 +224,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://cvcl.mit.edu/MM/stimuli.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"MNIST database of handwritten digits, near 1 million examples",
         "type": c.DATASET,
@@ -233,7 +233,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://yann.lecun.com/exdb/mnist/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Several Shape-from-Silhouette Datasets",
         "type": c.DATASET,
@@ -242,7 +242,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://kaiwolf.no-ip.org/3d-model-repository.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Stanford Dogs Dataset",
         "type": c.DATASET,
@@ -251,7 +251,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"SUN database, MIT",
         "type": c.DATASET,
@@ -260,7 +260,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://groups.csail.mit.edu/vision/SUN/hierarchy.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"The Action Similarity Labeling (ASLAN) Challenge",
         "type": c.DATASET,
@@ -269,7 +269,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.openu.ac.il/home/hassner/data/ASLAN/ASLAN.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"The Oxford-IIIT Pet Dataset",
         "type": c.DATASET,
@@ -278,7 +278,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.robots.ox.ac.uk/~vgg/data/pets/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Violent-Flows - Crowd Violence \ Non-violence Database and benchmark",
         "type": c.DATASET,
@@ -287,7 +287,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.openu.ac.il/home/hassner/data/violentflows/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Visual genome",
         "type": c.DATASET,
@@ -296,7 +296,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://visualgenome.org/api/v0/api_home.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"YouTube Faces Database",
         "type": c.DATASET,
@@ -305,7 +305,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.cs.tau.ac.il/~wolf/ytfaces/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Context-aware data sets from five domains",
         "type": c.DATASET,
@@ -314,7 +314,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "https://github.com/irecsys/CARSKit/tree/master/context-aware_data_sets",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Delve Datasets for classification and regression (Univ. of Toronto)",
         "type": c.DATASET,
@@ -323,7 +323,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.cs.toronto.edu/~delve/data/datasets.html",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Discogs Monthly Data",
         "type": c.DATASET,
@@ -332,7 +332,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://data.discogs.com/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"eBay Online Auctions (2012)",
         "type": c.DATASET,
@@ -341,7 +341,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.modelingonlineauctions.com/datasets",
         "paper_url": null,
-     },
+    },
     { 
         "title":"IMDb Database",
         "type": c.DATASET,
@@ -350,7 +350,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://www.imdb.com/interfaces",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Keel Repository for classification, regression and time series",
         "type": c.DATASET,
@@ -359,7 +359,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://sci2s.ugr.es/keel/datasets.php",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Labeled Faces in the Wild (LFW)",
         "type": c.DATASET,
@@ -368,7 +368,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://vis-www.cs.umass.edu/lfw/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Lending Club Loan Data",
         "type": c.DATASET,
@@ -377,7 +377,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "https://www.lendingclub.com/info/download-data.action",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Machine Learning Data Set Repository",
         "type": c.DATASET,
@@ -386,7 +386,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://mldata.org/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Million Song Dataset",
         "type": c.DATASET,
@@ -395,7 +395,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://labrosa.ee.columbia.edu/millionsong/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"More Song Datasets",
         "type": c.DATASET,
@@ -404,7 +404,7 @@ export const DATASET_DATA = [
         "problem_types":[c.MUSIC],
         "website_url": "http://labrosa.ee.columbia.edu/millionsong/pages/additional-datasets",
         "paper_url": null,
-     },
+    },
     { 
         "title":"MovieLens Data Sets",
         "type": c.DATASET,
@@ -413,7 +413,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://grouplens.org/datasets/movielens/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"New Yorker caption contest ratings",
         "type": c.DATASET,
@@ -422,7 +422,7 @@ export const DATASET_DATA = [
         "problem_types":[c.CAPTIONING],
         "website_url": "https://github.com/nextml/caption-contest-data",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Registered Meteorites on Earth",
         "type": c.DATASET,
@@ -431,7 +431,7 @@ export const DATASET_DATA = [
         "problem_types":[c.SPACE],
         "website_url": "http://healthintelligence.drupalgardens.com/content/registered-meteorites-has-impacted-earth-visualized",
         "paper_url": null,
-     },
+    },
     { 
         "title":"Restaurants Health Score Data in San Francisco",
         "type": c.DATASET,
@@ -440,7 +440,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://missionlocal.org/san-francisco-restaurant-health-inspections/",
         "paper_url": null,
-     },
+    },
     { 
         "title":"UCI Machine Learning Repository",
         "type": c.DATASET,
@@ -449,7 +449,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://archive.ics.uci.edu/ml/",
         "paper_url": null,
-     },
+    },
     { 
         "title": "Yahoo! Ratings and Classification Data",
         "type": c.DATASET,
@@ -458,7 +458,7 @@ export const DATASET_DATA = [
         "problem_types":[],
         "website_url": "http://webscope.sandbox.yahoo.com/catalog.php?datatype=r",
         "paper_url": null,
-     },
+    },
     { 
         "title": "Youtube 8m",
         "type": c.DATASET,
@@ -470,5 +470,5 @@ export const DATASET_DATA = [
         "problem_types":[c.COMPUTER_VISION, c.VIDEO, c.CLASSIFICATION, c.MULTILABEL],
         "website_url": "https://research.google.com/youtube8m/download.html",
         "paper_url": "https://research.google.com/youtube8m/workshop.html",
-     },
+    },
 ]
