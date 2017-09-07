@@ -1,4 +1,4 @@
-SearchZoo
+ZooSearch
 ===========================
 
 Search engine for machine learning models and datasets
