@@ -220,7 +220,7 @@ export const MODEL_DATA = [
 		"paper_url": "https://arxiv.org/abs/1608.06993"
 	},
 	{
-		"title": "RESNEXT",
+		"title": "ResNeXt",
 		"type": c.MODEL,
         "architecture": RESNEXT,
         "frameworks": [

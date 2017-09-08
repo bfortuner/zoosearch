@@ -32,6 +32,7 @@ export const SPACE = 'Space'
 export const RESTAURANTS = 'Restaurants'
 export const SPORTS = 'Sports'
 export const MOVIES = 'Movies'
+export const FASHION = 'Fashion'
 
 
 // Problem Types
