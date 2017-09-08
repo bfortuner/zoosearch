@@ -25,6 +25,8 @@ export const FAST_RCNN = 'Fast RCNN'
 export const MASK_RCNN = 'Mask RCNN'
 export const SSD = 'SSD'
 export const RFCN = 'RFCN'
+export const SENET = 'SENet'
+export const RESNEXT = 'ResNeXt'
 
 
 
@@ -205,7 +207,9 @@ export const MODEL_DATA = [
         "frameworks": [
 			{
 				"framework": PYTORCH,
-				"url": "https://github.com/pytorch/vision/blob/master/torchvision/models/densenet.py"
+				"url": "https://github.com/pytorch/vision/blob/master/torchvision/models/densenet.py",
+				"framework": KERAS,
+				"url": "https://github.com/flyyufelix/cnn_finetune"
 			},
 		],
         "description": null,
@@ -214,6 +218,44 @@ export const MODEL_DATA = [
         "problem_types": [c.CLASSIFICATION],
 		"topics": [],
 		"paper_url": "https://arxiv.org/abs/1608.06993"
+	},
+	{
+		"title": "RESNEXT",
+		"type": c.MODEL,
+        "architecture": RESNEXT,
+        "frameworks": [
+			{
+				"framework": TORCH,
+				"url": "https://github.com/facebookresearch/ResNeXt",
+				"framework": KERAS,
+				"url": "https://github.com/titu1994/Keras-ResNeXt/blob/master/resnext.py",
+			},
+		],
+        "description": null,
+		"dataset": c.IMAGENET,
+		"class_labels": [],
+        "problem_types": [c.CLASSIFICATION],
+		"topics": [],
+		"paper_url": "https://arxiv.org/abs/1611.05431"
+	},
+	{
+		"title": "SENet",
+		"type": c.MODEL,
+        "architecture": SENET,
+        "frameworks": [
+			{
+				"framework": CAFFE,
+				"url": "https://github.com/hujie-frank/SENet",
+				"framework": TENSORFLOW,
+				"url": "https://github.com/ppwwyyxx/tensorpack/blob/master/examples/ResNet/imagenet-resnet-se.py"
+			},
+		],
+        "description": null,
+		"dataset": c.IMAGENET,
+		"class_labels": [],
+        "problem_types": [c.CLASSIFICATION],
+		"topics": [],
+		"paper_url": "https://arxiv.org/abs/1709.01507"
 	},
 	{
 		"title": "SqueezeNet",
