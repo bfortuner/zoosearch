@@ -510,10 +510,10 @@ export const DATASET_DATA = [
     { 
         "title": "Fashion-MNIST",
         "type": c.DATASET,
-        "description":"",
+        "description":"Fashion-MNIST is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. We intend Fashion-MNIST to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits.",
         "topics":[c.FASHION],
         "problem_types":[c.COMPUTER_VISION, c.CLASSIFICATION],
         "website_url": "https://github.com/zalandoresearch/fashion-mnist",
-        "paper_url": null,
+        "paper_url": "http://arxiv.org/abs/1708.07747",
     },
 ]
